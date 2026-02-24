@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WIP Chapters/01. Introduction.md",
+                "file": "WIP Chapters/1.3 Costs and Benefits.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01. Introduction"
+              "title": "1.3 Costs and Benefits"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WIP Chapters/02. Observability.md",
+                "file": "WIP Chapters/Outline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02. Observability"
+              "title": "Outline"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WIP Chapters/01. Introduction.md",
+                "file": "Notes/00. Pre-work.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01. Introduction"
+              "title": "00. Pre-work"
             }
           },
           {
@@ -55,16 +55,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WIP Chapters/02. Observability.md",
+                "file": "WIP Chapters/1.1 + 1.2 Observability.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02. Observability"
+              "title": "1.1 + 1.2 Observability"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,26 +205,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa150057471aacef",
+  "active": "436678b0f2dcfa54",
   "lastOpenFiles": [
-    "WIP Chapters/01. Introduction.md",
+    "WIP Chapters/1.1 + 1.2 Observability.md",
+    "WIP Chapters/1.3 Costs and Benefits.md",
+    "WIP Chapters/0. Introduction.md",
     "WIP Chapters/Outline.md",
-    "~WRL1652.tmp",
-    "~WRD1636.tmp",
-    "WIP Chapters/02. Observability.md",
-    "Notes/Recommendations.md",
-    "Notes/Otázky ku práci.md",
-    "~$tterpach_bp_en.docx",
-    "mitterpach_bp_en.docx",
-    "Word BP a DP_English_SS26.docx",
     "Notes/00. Pre-work.md",
     "Notes/02. Observability NOTES.md",
+    "Notes/Otázky ku práci.md",
+    "Notes/Recommendations.md",
+    "~$tterpach_bp_en.docx",
+    "~WRL0001.tmp",
+    "~WRD0000.tmp",
+    "~WRL1652.tmp",
+    "~WRD1636.tmp",
+    "mitterpach_bp_en.docx",
+    "Word BP a DP_English_SS26.docx",
     "~$tterpach_bp.docx",
     "mitterpach_bp.docx",
     "Word BP a DP_verze_od_LS26.docx",
     "README.md",
-    "WIP Chapters",
-    "Notes",
     "Welcome.md"
   ]
 }
