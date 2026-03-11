@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"062dbf0e2b3dfd21","x":-222,"y":400,"width":148,"height":60,"color":"5","type":"text","text":"## Monitoring"},
+		{"id":"4b5f4cac02c0fcf7","x":-221,"y":60,"width":147,"height":60,"color":"3","type":"text","text":"## Logging "},
+		{"id":"42689fa4ee2c69e8","x":-221,"y":-20,"width":285,"height":60,"color":"3","type":"text","text":"# Logging and Monitoring"},
+		{"id":"8fc428c6a193591d","x":56,"y":140,"width":250,"height":60,"color":"3","type":"text","text":"JSON, XML, Syslog, DMARC"},
+		{"id":"09306311f40e8c20","x":-156,"y":220,"width":163,"height":60,"color":"5","type":"text","text":"Creating logs"},
+		{"id":"ff7aa7f98d3ebfa4","x":56,"y":220,"width":250,"height":60,"color":"5","type":"text","text":"Commonly used logging libraries, options they provide"},
+		{"id":"84248aeb39bef660","x":-156,"y":300,"width":163,"height":60,"color":"5","type":"text","text":"Storing logs"},
+		{"id":"2889a8e56498b873","x":56,"y":300,"width":250,"height":60,"color":"5","type":"text","text":"Storage concerns, calculations, retention policies"},
+		{"id":"72e90ccdc240e413","x":-158,"y":140,"width":165,"height":60,"color":"3","type":"text","text":"Logging Formats"},
+		{"id":"8d39216cff2d715f","x":-149,"y":480,"width":150,"height":70,"color":"5","type":"text","text":"Real-time monitoring"},
+		{"id":"e2ad35132a804923","x":-148,"y":560,"width":150,"height":60,"color":"5","type":"text","text":"Aggregate Reports"},
+		{"id":"6a63478c3bc3b99c","x":-148,"y":640,"width":147,"height":57,"color":"5","type":"text","text":"Dashboards"}
+	],
+	"edges":[
+		{"id":"3fec5cff9ba9f8ce","fromNode":"72e90ccdc240e413","fromSide":"right","toNode":"8fc428c6a193591d","toSide":"left"},
+		{"id":"2c7f2cd7d08ededa","fromNode":"09306311f40e8c20","fromSide":"right","toNode":"ff7aa7f98d3ebfa4","toSide":"left"},
+		{"id":"869d2e871a98c727","fromNode":"84248aeb39bef660","fromSide":"right","toNode":"2889a8e56498b873","toSide":"left"}
+	]
+}

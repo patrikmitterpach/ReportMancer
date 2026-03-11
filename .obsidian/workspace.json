@@ -67,14 +67,17 @@
             "id": "7ee7e08001747b2b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "WIP Chapters/2.1. Logging Formats.md",
-                "mode": "source",
-                "source": false
+                "file": "Notes/Thesis Canvas.canvas",
+                "viewState": {
+                  "x": 63.38299433510036,
+                  "y": 372.80833466806394,
+                  "zoom": -0.3333333333333334
+                }
               },
-              "icon": "lucide-file",
-              "title": "2.1. Logging Formats"
+              "icon": "lucide-layout-dashboard",
+              "title": "Thesis Canvas"
             }
           },
           {
@@ -162,7 +165,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "5519d5c24df784ca",
@@ -250,13 +254,14 @@
   },
   "active": "7ee7e08001747b2b",
   "lastOpenFiles": [
+    "WIP Chapters/2.1. Logging Formats.md",
+    "Notes/Thesis Canvas.canvas",
     "~$tterpach_bp_en.docx",
     "Notes/Brainstorm.md",
     "1.2.2 Knight Capital.md",
     "~WRL3813.tmp",
     "~WRD3793.tmp",
     "WIP Chapters/2. Monitoring.md",
-    "WIP Chapters/2.1. Logging Formats.md",
     "WIP Chapters/Outline.md",
     "WIP Chapters/-1. Abstract.md",
     "~WRL1169.tmp",
