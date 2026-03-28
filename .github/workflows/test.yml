@@ -1,0 +1,39 @@
+
+# Source for testing scaffolding: 
+# https://medium.com/@biagolini/automating-python-quality-a-practical-guide-to-pytest-and-ci-cd-f3c821b8f8bf
+
+name: Run Tests
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          pytest -v
+          echo "✅ All tests passed successfully!"
+
+      - name: Test failure notification
+        if: failure()
+        run: |
+          echo "❌ Tests failed! Check the logs above for details."
+          exit 1
