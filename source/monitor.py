@@ -12,8 +12,8 @@ bp = Blueprint('monitor', __name__)
 def index():
     db = get_db()
     posts = db.execute(
-        'SELECT  p.id, source, created, returnCode, fileType, body'
-        ' FROM report p ORDER BY created DESC'
+        'SELECT  p.id, source, created, returnCode, fileType, body '
+        'FROM report p ORDER BY created DESC'
     ).fetchall()
     
     return render_template('monitor/index.html', posts=posts)
