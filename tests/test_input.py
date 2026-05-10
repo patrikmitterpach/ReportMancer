@@ -59,15 +59,12 @@ valid_jsons = [
                 "port": 443,
                 "effective-expiration-date": "2014-05-01T12:40:50Z",
                 "served-certificate-chain": [
-                    """
-    -----BEGIN CERTIFICATE-----
-    MIIEBDCCAuygAwIBAgIDAjppMA0GCSqGSIb3DQEBBQUAMEIxCzAJBgNVBAYTAlVT
-    HFa9llF7b1cq26KqltyMdMKVvvBulRP/F/A8rLIQjcxz++iPAsbw+zOzlTvjwstz
-    WHPbqCRiOwY1nQ2pM714A5AuTHhdUDqB1O6gyHA43LL5Z/qHQF1hwFGPa4NrzQU6
-    yuGnBXj8ytqU0CwIPX4WecigUCAkVDNx
-    -----END CERTIFICATE-----
-                """
-                ],
+"""-----BEGIN CERTIFICATE-----\
+MIIEBDCCAuygAwIBAgIDAjppMA0GCSqGSIb3DQEBBQUAMEIxCzAJBgNVBAYTAlVT\
+HFa9llF7b1cq26KqltyMdMKVvvBulRP/F/A8rLIQjcxz++iPAsbw+zOzlTvjwstz\
+WHPbqCRiOwY1nQ2pM714A5AuTHhdUDqB1O6gyHA43LL5Z/qHQF1hwFGPa4NrzQU6\
+yuGnBXj8ytqU0CwIPX4WecigUCAkVDNx\
+-----END CERTIFICATE-----"""],
             },
         }
     ,

@@ -2,6 +2,8 @@
 
 {% block header %}
 <h1>{% block title %}Reports received{% endblock %}</h1>
+<a href="{{ url_for('monitor.download_all')}}""><button>Download reports</button></a>
+
 {% endblock %}
 
 {% block content %}

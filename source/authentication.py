@@ -7,6 +7,11 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from source.database import get_db
 
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 @bp.route('/register', methods=('GET', 'POST'))
@@ -82,7 +87,9 @@ def logout():
 def login_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
-        if g.user is None:
+        print({section: dict(config[section]) for section in config.sections()})
+        print( g.user is None and bool(config['Auth']['require_auth']))
+        if g.user is None and config['Auth']['require_auth'] == "True":
             return redirect(url_for('auth.login'))
 
         return view(**kwargs)

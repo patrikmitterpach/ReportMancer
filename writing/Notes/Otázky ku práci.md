@@ -1,3 +1,0 @@
-- ako často citovať
-- vyzerá formát akceptovateľne zatiaľ?
-- ako zapisovať čísla a dátumy (2.5% vs 2,5%), (americký štýl 02/14/2026, český 14.2.2026)

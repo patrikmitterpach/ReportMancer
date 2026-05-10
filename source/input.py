@@ -3,8 +3,9 @@ from flask import (
 )
 from werkzeug.exceptions import abort
 
-import json
+import xmltodict, json
 import time
+import logging
 
 from datetime import datetime
 import xml.etree.ElementTree as ET
@@ -12,21 +13,30 @@ import xml.etree.ElementTree as ET
 from source.authentication import login_required
 from source.database import get_db
 
+# Setup logger
+logger = logging.getLogger('MyLogger')
+logger.setLevel(logging.DEBUG)
+
+from source.export import export_report
+
 bp = Blueprint('input', __name__)
 
 VALID_CONTENT_TYPES = ["text/json", "text/xml"]
 
 def commitReportToDatabase(url, timeStamp, fileType, data):
-        db = get_db()
-        # According to flask documentation, 
-        #  this should be immune to SQL injections 
-        #  as the inputs are parametrized
-        db.execute(
-        'INSERT INTO report (source, created, fileType, fullBody)'
-        ' VALUES (?, ?, ?, ?)',
-        (url, timeStamp, fileType, data)
-        )
-        db.commit()
+    db = get_db()
+    # According to flask documentation, 
+    #  this should be immune to SQL injections 
+    #  as the inputs are parametrized
+    db.execute(
+    'INSERT INTO report (source, created, fileType, fullBody)'
+    ' VALUES (?, ?, ?, ?)',
+    (url, timeStamp, fileType, data)
+    )
+    db.commit()
+
+    
+
 
 def validateRequest(request):
     print(request)
@@ -63,16 +73,18 @@ def index():
     assert request.content_type.lower() in VALID_CONTENT_TYPES
 
     if "json" in request.content_type.lower():
-        data = json.loads(request.data)
+        json_data = json.loads(request.data)
         ## Assume ReportingAPI report
-        url = data["url"]
+        url = json_data["url"]
         
         # Time is current time - age, given in request
-        currentTimeMinusAge = int(time.time()) - data["age"]
+        currentTimeMinusAge = int(time.time()) - json_data["age"]
         timeStamp = datetime.fromtimestamp(currentTimeMinusAge).strftime('%Y-%m-%d %H:%M:%S')
 
         fileType = request.content_type
-        commitReportToDatabase(url, timeStamp, fileType, json.dumps(data, indent=4))
+        commitReportToDatabase(url, timeStamp, fileType, json.dumps(json_data, indent=4))
+
+        json_data = {"type": "ReportingAPI", "data": json_data}
         
 
     elif "xml" in request.content_type.lower():
@@ -89,8 +101,10 @@ def index():
 
             ET.indent(child, space="    ")
 
-            commitReportToDatabase(url, timeStamp, fileType, ET.tostring(child).decode())
-        
+            data = ET.tostring(child).decode()
 
-        
-    return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
+            commitReportToDatabase(url, timeStamp, fileType, data)
+            json_data = {"type": "DMARC Aggregate Report", "data": xmltodict.parse(data)}
+
+    export_report(json_data)
+    return json.dumps({'Message': "Request saved successfully"}), 200, {'ContentType':'application/json'}

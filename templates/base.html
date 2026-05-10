@@ -1,17 +1,16 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} - Reportmancer</title>
+<title>{% block title %}{% endblock %} - ReportMancer</title>
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <nav>
   
   <a href="/"><img src="{{ url_for('static', filename='favicon.ico') }}" class="icon"></a>
-  <a href="/"><h1>Report Mancer</h1></a>
+  <a href="/"><h1>ReportMancer</h1></a>
   <ul style="text-align: end;">
     {% if g.user %}
     <li><span>{{ g.user['username'] }}</span>
     <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
       {% else %}
-    <li><a href="{{ url_for('auth.register') }}">Register</a>
     <li><a href="{{ url_for('auth.login') }}">Log In</a>
       {% endif %}
   </ul>
