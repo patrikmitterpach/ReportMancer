@@ -21,3 +21,7 @@ The Flask application parses these requests and sends it on in a single unified 
 filling in the details if not clear (adding current timestamp, userAgent)
 
 Configuration contains the options for adding authentication, as well as enabling export to another server with the syslog format. 
+
+To start the application, first create the database with `flask --app main init-db`, after which you can start the application with `flask --app main run`.
+
+
